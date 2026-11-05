@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy information for Literacy Explorer: local learner profiles, on-device reading assessment and optional progress sharing.">
+  <title>Literacy Explorer privacy policy — review draft</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, sans-serif; color: #202633; background: #f4f6fa; }
+    body { margin: 0; line-height: 1.7; }
+    main { max-width: 820px; margin: 32px auto; padding: 32px; background: white; border-radius: 16px; }
+    h1, h2 { line-height: 1.25; color: #243e71; } h2 { margin-top: 2rem; }
+    a { color: #194f9d; overflow-wrap: anywhere; } a:focus-visible { outline: 3px solid #194f9d; outline-offset: 3px; }
+    .draft { padding: 16px; border: 2px solid #996000; background: #fff5da; border-radius: 8px; }
+    .meta { color: #50596b; } li { margin-block: .5rem; }
+    @media (max-width: 600px) { main { margin: 0; padding: 22px; border-radius: 0; } }
+    @media print { main { margin: 0; max-width: none; } body { background: white; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <p><a href="./index.html">Privacy information home</a></p>
+    <h1>Literacy Explorer privacy policy</h1>
+    <p class="meta">Android application: <strong>com.literacyexplorer.nativeapp</strong> (launcher label: Literacy; interface: Literacy Explorer)<br>Last updated and effective: 5 November 2026.</p>
+
+  </header>
+
+  <h2>Who is responsible</h2>
+  <p>Literacy Explorer is operated by <strong>Richard</strong>. Privacy contact: <a href="mailto:richard.devera0092@gmail.com">richard.devera0092@gmail.com</a>. The Philippines is the initial distribution market. The app provides reading assessment and practice for school learners and is not officially affiliated with or endorsed by DepEd or another government agency.</p>
+
+  <h2>Information stored on your device</h2>
+  <p>When you create a local learner profile, the app stores a username, learner name, Learner Reference Number (LRN), grade, section, school and division information. It stores a salted hash of your local PIN rather than the PIN itself in the profile record. Profiles use local PIN access; the reviewed app does not create a remote login account with the operator.</p>
+  <p>The app also keeps reading assessments and progress, recognized-reading results and measures, learning history, streaks, mascot and token records, imported teacher test configurations and saved progress snapshots. These support practice, assessment, feedback and reports. The active learner-profile store uses encryption with an Android Keystore key. The separate local database uses a random secret protected by Android Keystore. Clipboard items and exported reports are outside these encrypted stores.</p>
+
+  <h2>Microphone and reading aloud</h2>
+  <p>The microphone is used when you choose to record a reading attempt and allow Android's microphone permission. English reading is processed by bundled Whisper on your device. Non-English teacher tests use Android's on-device speech recognizer only on Android 12 or later when an on-device recognizer and offline language pack are available. There is no online recognition fallback. Imported tests and saved progress remain available when local capture is unsupported. Recognized text and assessment results may become part of local learning records.</p>
+  <p>The app clears audio sample buffers after processing and includes cleanup for temporary recording files and interrupted captures. This is not a promise of forensic erasure. You may deny or revoke microphone permission in Android settings; activities that need spoken assessment cannot complete without it.</p>
+  <p>Spoken examples and feedback use Android's text-to-speech provider. Spoken reference and feedback paths require an available offline English voice. If no suitable offline voice is installed, spoken examples may be unavailable. Voice downloads and provider data practices are controlled by the selected Android provider.</p>
+
+  <h2>Camera and imported QR images</h2>
+  <p>The camera is used to scan a teacher's test QR code after you choose to scan and allow camera access. You can also select a QR image through Android's document chooser. The app decodes these on your device without uploading the camera image. Imported test content and related results can remain in local storage. You may revoke camera permission in Android settings.</p>
+
+  <h2>Internet connections and service providers</h2>
+  <p>The school lookup screen automatically refreshes a public school directory from Google-hosted spreadsheets and also offers a manual refresh. These requests download directory information; their request construction does not send your entered name, LRN or PIN. The hosting service receives connection information such as your IP address and request metadata. Cached or bundled directory information is used when available offline.</p>
+  <p>Learning content is bundled with this release, and scheduled online curriculum updates are not enabled. School-directory refresh is separate from learning content. The app does not directly upload learner assessments to an operator-run server.</p>
+  <p>For Google's handling of its service data, see <a href="https://policies.google.com/privacy">Google's privacy policy</a>. An external service's policy does not replace the operator's responsibility for this app.</p>
+
+  <h2>Advertising and third-party SDKs</h2>
+  <p>Some builds can display Google Mobile Ads when advertising is explicitly enabled. In those builds, a banner may appear at the top of the app and an interstitial may appear after a saved Reading Level, Practice or Vocabulary result. Requests are made only while the device has validated Internet access and after the Google User Messaging Platform (UMP) reports that requests are allowed. Learning and assessment remain available without ads. App-open and rewarded ads are not used, and standard interstitials do not award tokens.</p>
+  <p>The app applies child-directed treatment and a general-audience content limit for every learner; grade is not treated as verified age. Google may process connection information such as IP address, device or app information, ad interactions and diagnostics to provide and measure ads and comply with consent choices. The app does not intentionally send learner names, LRN, PIN, reading results, transcripts, camera images or audio recordings to the ad SDK. The app removes advertising identifier and AdServices permissions, and the child-directed request treatment is configured before Mobile Ads initialization. See <a href="https://policies.google.com/privacy">Google's privacy policy</a> and the current <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google Mobile Ads data disclosure</a> for Google's handling.</p>
+  <p>Developer builds use Google's test ad units. Production ads remain disabled unless a release is explicitly built with the approved advertising opt-in. This candidate describes the intended enabled build; it must be reviewed against the exact release and Play Console declarations before publication. No public policy update has occurred.</p>
+
+  <h2>Sharing progress</h2>
+  <p>You choose when to generate a progress snapshot, show its QR code, copy report text or save a text document. Snapshot data includes the LRN and learning summaries and can include grade, section, progress, streak and token information. The snapshot excludes the learner name, PIN and raw answer detail in the reviewed encoder. Treat the LRN and report as personal information even when the name is omitted.</p>
+  <p>A person who scans the QR code or receives the saved or copied text can read, retain and further process it. Exported text and clipboard data are outside the app's encrypted profile store. The app cannot erase copies held by a teacher, recipient, file service or another application. Share only with appropriate, trusted recipients. The reviewed source does not show sale of learner profile or assessment information by the operator.</p>
+
+  <h2>Children and school use</h2>
+  <p>Literacy Explorer is intended for Grades 1–12, approximately ages 6–18, and offers different visual themes by grade. Bundled practice and vocabulary cover Grades 1–10; older learners can select those levels for review without changing their profile grade. Teacher comprehension tests can match Grades 1–12. A grade choice is not verified age or parental consent. A parent, guardian or authorized educator should help a child understand local profile creation, microphone and camera access, and sharing learner reports.</p>
+
+  <h2>Retention and deletion</h2>
+  <p>Local profiles and learning records remain until removed. To delete one learner, open My profile, choose Delete this profile, enter the current local PIN and confirm permanent deletion. This removes that learner's profile, learning history, imported tests, snapshots, rewards and access state from the active local store while preserving other profiles. It cannot be undone.</p>
+  <p>To remove all local app data, use Android Settings → Apps → Literacy (or Literacy Explorer) → Storage → Clear storage or Clear data (wording varies by device), or uninstall the app. There is no remote login account or cloud restore of learner profiles. The app excludes its private records from automatic cloud backup and device transfer.</p>
+  <p>Deleting a profile, clearing app data or uninstalling does not remove files exported elsewhere, clipboard copies or reports retained by recipients. Delete your saved exports separately and ask recipients about their copies. Service providers control retention of connection information they receive. No fixed automatic deletion period or forensic-erasure guarantee is offered.</p>
+
+  <h2>Security and your choices</h2>
+  <p>The app uses local PIN hashing, Android private storage, an encrypted active learner store and HTTPS for the reviewed directory downloads. No security measure guarantees protection on an unlocked, compromised or shared device. Keep the device and PIN secure, review Android permissions, and avoid sharing reports in public channels.</p>
+  <p>You can edit profile details in My profile, revoke microphone or camera access in Android settings, use available offline content, and choose whether to export reports. Contact the privacy address above about this policy or information you voluntarily send to support. Do not email a child's complete learner record, PIN or audio unless a necessary and appropriate secure process has been arranged.</p>
+
+  <h2>Changes and contact</h2>
+  <p>The policy must be updated when the shipping app's data practices change. Privacy requests can be directed to <a href="mailto:richard.devera0092@gmail.com">richard.devera0092@gmail.com</a>. If you voluntarily email support, your message and return address are received for responding to your request; avoid sending unnecessary learner information.</p>
+<h2>Unlocking, test sources and sharing</h2>
+  <p>Unlock expires after five minutes without interaction or 30 seconds in the background. A restored app process requires the PIN again. Entered PINs are not saved in UI restoration state; changing profile details or the PIN requires the current PIN.</p>
+  <p>Unsigned teacher material is marked unverified and requires confirmation before use. Offline test QR material contains readable correct answers and is not a confidential exam. Progress reports are self-reported local summaries; their checksum detects accidental changes and does not certify identity or teacher approval. Copying or saving a report requires confirmation and shares the full LRN and summary with your selected recipient.</p>
+  </main>
+</body>
+</html>
